@@ -4,15 +4,6 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 
-delete L.Icon.Default.prototype._getIconUrl;
-
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
-  iconUrl: require("leaflet/dist/images/marker-icon.png"),
-  shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
-});
-
-
 const earthquakeIcon = new L.Icon({
   iconUrl:
     "https://upload.wikimedia.org/wikipedia/commons/8/88/Map_marker.svg",
@@ -23,7 +14,7 @@ const earthquakeIcon = new L.Icon({
 
 
 const EarthquakeMap = ({ earthquakes }) => {
-    console.log("EarthquakeMap components" , earthquakes)
+    console.log("EarthquakeMap components")
   return (
     <MapContainer
       center={[20, 0]}
