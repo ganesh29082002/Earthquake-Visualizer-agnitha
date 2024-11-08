@@ -23,7 +23,7 @@ const earthquakeIcon = new L.Icon({
 
 
 const EarthquakeMap = ({ earthquakes }) => {
-    console.log("EarthquakeMap components")
+    console.log("EarthquakeMap components" , earthquakes)
   return (
     <MapContainer
       center={[20, 0]}
